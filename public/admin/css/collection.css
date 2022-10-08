@@ -1,0 +1,48 @@
+label.error {
+    color: red;
+    font-size: 14px;
+    display: block;
+}
+
+.primary-title{
+    text-align: center;
+    font-family: roboto;
+    margin-bottom: 10px;
+    border-bottom: 2px #15305b;
+    border-bottom-style: dashed;
+}
+.form-label {
+    margin-left: 10px;
+    float: right;
+    margin-top: 2%;
+    padding-right: 10px;
+    width: 100%;
+    text-align: right;
+}
+.container{
+    font-family: Roboto!important;
+}
+
+.form-control {
+    padding-left: 10px;
+    height: 33px;
+    font-size: 14px;
+    background-color: white;
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #15305b;
+    border-color: #15305b;
+}
+.btn-primary{
+    padding: 5px;
+    margin-left: 10%;
+    background-color: #15305b!important;
+}
+

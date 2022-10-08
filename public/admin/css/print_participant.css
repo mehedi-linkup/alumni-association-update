@@ -1,0 +1,68 @@
+/* Invoice */
+.panel-default {
+    border-color: #ddd;
+}
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+}
+.panel-body {
+    padding: 15px;
+}
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+.text-right {
+    text-align: right;
+}
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 5%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 5%);
+}
+b,
+strong {
+    font-weight: 700;
+}
+.table-responsive {
+    min-height: .01%;
+    overflow-x: auto;
+}
+.text-center {
+    text-align: center;
+}
+.row-printable {
+    border: 5px inset #4f4f4f;
+}
+.set-box-shadow {
+    -webkit-box-shadow: 4px 4px 14px #4f4f4f;
+    -moz-box-shadow: 4px 4px 14px #4f4f4f;
+    box-shadow: 4px 4px 14px #4f4f4f;
+}
+.set-padding {
+    padding: 40px;
+}
+.set-margin {
+    margin: 30px;
+}
+
+/* End Invoice */

@@ -1,0 +1,39 @@
+label.error{
+    color: red;
+    font-size: 14px;
+    display: block;
+}
+.card-info:not(.card-outline)>.card-header {
+    background-color: #15305b;
+}
+.card-title{
+    margin-bottom: 0;
+    color: #fff;
+}
+.form-label{
+    margin-left: 0;
+    padding-right: 10px;
+    text-align: left;
+}
+.form-control{
+    padding-left: 10px;
+    height: 30px;
+    font-size: 14px;
+    background-color: white;
+}
+.form-group{
+    display: block;
+}
+.btn-info {
+    color: #fff;
+    background-color: #15305b;
+    border-color: #15305b;
+}
+.card-body{
+    padding: 1.25rem 1.25rem 0;
+    font-family: Roboto;
+}
+.card-body .form-group{
+    margin-bottom: 8px!important;
+    margin-left: 5px!important;
+}

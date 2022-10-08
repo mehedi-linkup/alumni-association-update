@@ -1,0 +1,13 @@
+table {
+    font-family: roboto;
+}
+
+table th {
+    text-align: center;
+    background-color: #294a70;
+    color: #fff;
+}
+
+table td {
+    text-align: center;
+}

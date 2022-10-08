@@ -1,0 +1,123 @@
+/* Cantact Us Page */
+
+.contact_details h4 {
+    font-size: 23px;
+    font-family: 'Open Sans', sans-serif;
+    color: #02024c;
+    font-style: normal;
+    font-weight: 800;
+    position: relative;
+}
+
+.contact_details p {
+    color: #000;
+    font-size: 14px;
+}
+
+.fa,
+.fas {
+    font-weight: 900;
+    font-size: 12px !important;
+}
+
+.only {
+    background: #1852BC;
+    border-radius: 40px;
+    color: #ffffff;
+    font-size: 14px;
+    height: 30px;
+    margin-bottom: 8px;
+    margin-right: 9px;
+    padding: 8px 0;
+    text-align: center;
+    width: 30px;
+}
+
+.margin-icon {
+    left: -2.5em !important;
+}
+
+.info-section {
+    margin-left: 2%;
+    margin-top: 3%;
+}
+
+.cantact-h2 {
+    font-size: 26px;
+    font-family: 'Open Sans', sans-serif;
+    color: #02024c;
+    font-style: normal;
+    font-weight: 800;
+    text-align: center;
+    margin: 21px 0px 39px 0px;
+    position: relative;
+}
+
+.cantact-h2::before {
+    content: '';
+    position: absolute;
+    background: #0c002b;
+    height: 2px;
+    width: 34%;
+    top: 130%;
+    transform: translateY(-50%);
+    left: 174px;
+}
+
+.cantact-h2::after {
+    content: '';
+    position: absolute;
+    background: #1779ff;
+    height: 2px;
+    width: 34%;
+    top: 130%;
+    transform: translateY(-50%);
+    margin-left: -87px;
+}
+
+.contact-span {
+    margin-left: 10px;
+    color: #fc544b;
+}
+
+.contact {
+    padding: 110px 0px 90px;
+    position: relative;
+}
+
+.form-control {
+    margin-bottom: 2%;
+    color: #294a70 !important;
+    background-color: #fff !important;
+    background-clip: padding-box;
+    border: 1px solid #294a70 !important;
+    height: 72% !important;
+    width: 97% !important;
+}
+
+.contact-form {
+    margin-top: 3%;
+    margin-bottom: 9%;
+    margin-left: 18%;
+}
+
+.textarea.form-control {
+    height: 100% !important;
+}
+
+@media only screen and (max-width:767px) {
+    .cantact-h2::before {
+        left: 12% !important;
+    }
+    .cantact-h2::after {
+        margin-left: -83px !important;
+    }
+    .contact-form {
+        margin-left: 4% !important;
+    }
+}
+
+@media only screen and (min width:768px) {}
+
+
+/* End Cantact Us Page */

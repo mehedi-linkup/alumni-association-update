@@ -1,0 +1,13 @@
+@media screen and (min-width:768px){
+    .modal-dialog{
+        max-width: 700px!important;
+        font-family: Roboto;
+    }
+    .modal-dialog .modal-body{
+        margin-left: 10px!important;
+    }
+  
+}
+.modal-dialog .modal-body .form-control{
+    width: 95%!important;
+}

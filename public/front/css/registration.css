@@ -1,0 +1,270 @@
+/*regtration form*/
+
+
+/*.signup-title{*/
+
+
+/*}*/
+
+input[type='text'],
+input[type='password'] {
+    font-size: 12px;
+}
+
+@media (min-width: 1300px) {}
+
+.signup-title h2 {
+    font-size: 26px;
+    font-family: 'Open Sans', sans-serif;
+    color: #02024c;
+    font-style: normal;
+    font-weight: 800;
+    text-align: center;
+    margin: 21px 0px 39px 0px;
+    position: relative;
+}
+
+.signup-top {
+    background-color: #ffffff;
+    background-repeat: repeat;
+    background-position: top left;
+    background-attachment: scroll;
+}
+
+.signup {
+    margin-bottom: 6%;
+}
+
+.signup-span {
+    margin-left: 10px;
+    color: #fc544b;
+}
+
+.signup-title h2::before {
+    content: '';
+    position: absolute;
+    background: #0c002b;
+    height: 2px;
+    width: 37%;
+    top: 141%;
+    transform: translateY(-50%);
+    left: 129px;
+}
+
+.signup-title h2::after {
+    content: '';
+    position: absolute;
+    background: #1779ff;
+    height: 2px;
+    width: 37%;
+    top: 141%;
+    transform: translateY(-50%);
+    margin-left: -103px;
+}
+
+input[type="submit"] {
+    height: auto;
+    cursor: pointer;
+    width: 100%;
+    color: #FFFFFF;
+    background-color: #019208;
+    font-size: 17px;
+    font-family: 'Nunito', sans-serif;
+    padding: 12px 0px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+input[type="submit"]:hover {
+    background-color: #fc544b;
+}
+
+textarea {
+    font-size: 17px;
+    font-family: 'Nunito', sans-serif;
+    border-radius: 5px;
+    outline: none;
+    width: 50%;
+    padding: 10px;
+    height: auto;
+    position: relative;
+    margin-left: 65px !important;
+    border-color: #fff;
+}
+
+input[type="submit"] {
+    height: auto;
+    cursor: pointer;
+    width: 100%;
+    color: #FFFFFF;
+    background-color: #d3eceb;
+    font-size: 17px;
+    font-family: 'Nunito', sans-serif;
+    padding: 12px 0px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+input[type="submit"]:hover {
+    background-color: #006805;
+}
+
+.btn-information {
+    padding: 5px 40px;
+    background-color: #0da8ee;
+    border-color: #0da8ee;
+    border-radius: 4px;
+}
+
+.btn-information:hover {
+    color: #fff;
+    background-color: #0da8ee;
+    border-color: #0da8ee;
+}
+
+.label-title {
+    float: left;
+    color: #fff;
+}
+
+.label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    width: 0%;
+}
+
+.form-top {
+    margin-left: 19%;
+}
+
+.image-input {
+    margin-left: 14%;
+}
+
+.img-show {
+    width: 48px;
+    height: 43px;
+    margin-left: -6%;
+}
+
+.btn-danger {
+    float: right;
+}
+
+.card-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    background: #cae2e2;
+    border-radius: 5px;
+}
+
+.select {
+    height: auto;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    font-size: 13px;
+    font-family: 'Nunito', sans-serif;
+    color: #000;
+    outline: none;
+    padding: 4px;
+}
+
+.select-gender {
+    height: auto;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    font-size: 13px;
+    font-family: 'Nunito', sans-serif;
+    color: #000;
+    outline: none;
+    padding: 4px;
+}
+
+.button {
+    background: #0b2446;
+}
+
+
+/*main registration part is start here*/
+
+.card-content {
+    max-width: 950px;
+    padding: 0 1.25rem 0 1.15rem;
+    margin: auto;
+    font-family: Roboto;
+}
+
+.input-group span {
+    z-index: 15;
+    position: absolute;
+    margin: 8px;
+}
+
+.form-control:focus {
+    border-bottom: 1px solid #ff990d!important;
+}
+
+.btn-registration {
+    padding: 8px!important;
+    background-color: red;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 6px;
+}
+
+.card-footer {
+    padding: 0!important;
+    margin-left: 64%;
+    margin-top: -122px;
+}
+
+.alert-success {
+    background-color: #66bb6a;
+    padding: 0%;
+    border-radius: 3px;
+}
+
+label.error {
+    color: #c73535;
+    font-size: 14px;
+    display: block;
+}
+
+label {
+    color: #000;
+}
+
+.custom-files {
+    top: -3px !important;
+    right: 1px !important;
+    left: 11px!important;
+}
+
+
+/*end here*/
+
+@media only screen and (max-width: 767px) {
+    .form-group {
+        margin-left: 0px !important;
+    }
+    .form-group1 {
+        margin-left: 76px !important;
+        margin-top: -12%;
+    }
+    .first img {
+        margin-left: 34% !important;
+        margin-top: 0% !important;
+    }
+    .label-title {
+        font-size: 12px;
+    }
+    .form-top {
+        margin-left: 0px;
+    }
+}
