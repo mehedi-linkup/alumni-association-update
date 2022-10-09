@@ -89,7 +89,6 @@ function participantsubmit() {
             },
             password: {
                 required: true,
-                
                 minlength: 6,
             },
             confirm_password: {
@@ -116,7 +115,7 @@ function participantsubmit() {
                 checkPhone: "This phone number is already exists! Try another.",
                 required: "Enter your Phone number",
                 minlength: "Phone Number requires at least 10 characters",
-                maxlength: "Phone Number cannot exceed 11 characters",
+                maxlength: "Phone Number cannot exceed 16 characters",
             },
             address: {
                 required: "Address cannot be Empty",
@@ -163,6 +162,7 @@ function participantsubmit() {
                         for (var i = 0; i < length; i++) {
                             $output += '<tr>';
                             $output += '<td class="text-center">' + (i+1) + '</td>';
+                            $output += '<td class="text-center">' + data[i].id + '</td>';
                             $output += '<td class="text-center">' + data[i].registration_id + '</td>';
                             $output += '<td class="text-center">' + data[i].name + '</td>';
                             $output += '<td class="text-center">' + data[i].email + '</td>';
@@ -250,7 +250,7 @@ function editparticipant(id) {
             $("#gender").val(data.gender);
             $("#occupation").val(data.occupation);
             $("#participant_id").val(data.id);
-            $(".mb-1.first").empty();
+            $(".mb-1.first img").attr('src','/admin/img/no_image_found.png');
             $("#name").focus();
             // $("#image").val(data.image);
             // $("#show_photo").attr("src","http://localhost/School-event/public/"+data.image);
@@ -285,6 +285,7 @@ function deleteparticipant(id) {
                     for (var i = 0; i < length; i++) {
                         $output += '<tr>';
                         $output += '<td class="text-center">' + (i+1) + '</td>';
+                        $output += '<td class="text-center">' + data[i].id + '</td>';
                         $output += '<td class="text-center">' + res[i].registration_id + '</td>';
                         $output += '<td class="text-center">' + res[i].name + '</td>';
                         $output += '<td class="text-center">' + res[i].email + '</td>';

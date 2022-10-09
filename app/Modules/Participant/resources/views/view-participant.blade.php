@@ -49,6 +49,7 @@
                             <thead>
                                 <tr>
                                     <th>SL</th>
+                                    <th>Reg. SL</th>
                                     <th>Registration Id</th>
                                     <th>Name</th>
                                     <th>Email</th>
@@ -245,6 +246,10 @@
             columns: [{
                     data: 'DT_RowIndex',
                     name: 'DT_RowIndex'
+                },
+                {
+                    data: 'id',
+                    name: 'id'
                 },
                 {
                     data: 'registration_id',

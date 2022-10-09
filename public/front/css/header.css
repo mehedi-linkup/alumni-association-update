@@ -213,7 +213,8 @@ btn-danger a:hover {
     display: inline-block;
     text-align: center;
     font-size: 101%;
-    font-weight: 900;
+    font-weight: 500;
+    min-height: 24px;
     color: green;
     margin-left: 31%;
     -webkit-text-stroke: 1px green;
@@ -222,10 +223,10 @@ btn-danger a:hover {
 #text1 {
     display: inline-block;
     text-align: center;
-    font-size: 80%;
-    font-weight: 100;
+    font-size: 120%;
+    font-weight: 400;
     color: rgb(64 60 50);
-    margin-left: 41%;
+    margin-left: 32%;
     -webkit-text-stroke: 1px rgb(252 84 75);
 }
 

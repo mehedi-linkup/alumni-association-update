@@ -40,12 +40,12 @@
                     <p class="master-address" style="margin-bottom:5px!important;">(Munshirhat, Fulgazi, Feni)</p>
                     <div id="text">
                         <div id="cursor"></div>
-                    </div>
+                    </div><br>
                     <div></div>
                     <div id="text1">
                         <div id="cursor1"></div>
                     </div>
-                    <div id="jumping_date" style="display:none">{{ date('F j, Y', strtotime(@$contact_info->program_start_date)) }}</div>
+                    <div id="jumping_date" style="display:none">{{ date('j F, Y', strtotime(@$contact_info->program_start_date)) }}</div>
                 </div>
 
             </div>

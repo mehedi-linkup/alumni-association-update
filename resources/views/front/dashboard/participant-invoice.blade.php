@@ -56,10 +56,6 @@
 
                 <div class="col-sm-6 text-sm-right order-sm-1"> <strong></strong>
                     <address>
-                        <!-- Koice Inc<br />
-      2705 N. Enterprise St<br />
-      Orange, CA 92865<br />
- contact@koiceinc.com -->
                         <div class="invoice-logo"><img width="100"
                                 @if (!Auth::guard('participant')->user()->image == '') src="{{ asset($participant->image) }}"   @elseif(Auth::guard('participant')->user()->gender == 'Male') src="{{ asset('front/images/male.png') }}" @else src="{{ asset('front/images/female.png') }}" @endif
                                 alt="Invoice logo"></div>
@@ -104,13 +100,13 @@
                                     @if (!Auth::guard('participant')->user()->image == '') src="{{ asset($participant->image) }}"   @elseif(Auth::guard('participant')->user()->gender == 'Male') src="{{ asset('front/images/male.png') }}" @else src="{{ asset('front/images/female.png') }}" @endif
                                     alt="">
                             </div>
-                            <div class="image pl-4 text-center">
+                            <div class="image text-center">
                                 <?php
                                 use SimpleSoftwareIO\QrCode\Facades\QrCode;
                                 echo QrCode::generate('Name: ' . $participant->name . "\r\n Id: " . intval($participant->registration_id) . "\r\n" . 'lunch'); ?>
                                 <p class="mb-0">
                                     {{ $participant->name }} <br>
-                                    Number : {{ $participant->phone }}<br>
+                                    Phone# {{ $participant->phone }}<br>
                                 </p>
                             </div>
                         </div>
@@ -127,7 +123,7 @@
                                 echo QrCode::generate('Name: ' . $participant->name . "\r\n Id: " . intval($participant->registration_id + 1) . "\r\n" . 'lunch'); ?>
                                 <p class="mb-0">
                                     {{ $participant->name }} <br>
-                                    Number : {{ $participant->phone }}<br>
+                                    Phone# {{ $participant->phone }}<br>
                                 </p>
                             </div>
                         </div>
@@ -145,7 +141,7 @@
                                 echo QrCode::generate('Name: ' . $participant->name . "\r\n Id: " . intval($participant->registration_id + 2) . "\r\n" . 'lunch'); ?>
                                 <p class="mb-0">
                                     {{ $participant->name }} <br>
-                                    Number : {{ $participant->phone }}<br>
+                                    Phone# {{ $participant->phone }}<br>
                                 </p>
                             </div>
                         </div>
@@ -163,7 +159,7 @@
                                 echo QrCode::generate('Name: ' . $participant->name . "\r\n Id: " . intval($participant->registration_id + 3) . "\r\n" . 'lunch'); ?>
                                 <p class="mb-0">
                                     {{ $participant->name }} <br>
-                                    Number : {{ $participant->phone }}<br>
+                                    Phone# {{ $participant->phone }}<br>
                                 </p>
                             </div>
                         </div>
@@ -180,7 +176,7 @@
                                 echo QrCode::generate('Name: ' . $participant->name . "\r\n Id: " . intval($participant->registration_id + 2) . "\r\n" . 'lunch'); ?>
                                 <p class="mb-0">
                                     {{ $participant->name }} <br>
-                                    Number : {{ $participant->phone }}<br>
+                                    Phone# {{ $participant->phone }}<br>
                                 </p>
                             </div>
                         </div>
@@ -198,7 +194,7 @@
                                 echo QrCode::generate('Name: ' . $participant->name . "\r\n Id: " . intval($participant->registration_id + 3) . "\r\n" . 'lunch'); ?>
                                 <p class="mb-0">
                                     {{ $participant->name }} <br>
-                                    Number : {{ $participant->phone }}<br>
+                                    Phone# {{ $participant->phone }}<br>
                                 </p>
                             </div>
                         </div>

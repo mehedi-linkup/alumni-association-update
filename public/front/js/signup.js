@@ -116,7 +116,7 @@ function participantsubmit() {
                 checkPhoneFront:'Phone Number Exist!',
                 // matches: "Phone number cannot be string",
                 minlength: "Phone Number requires at least 10 characters",
-                maxlength: "Phone Number cannot exceed 11 characters",
+                maxlength: "Phone Number cannot exceed 16 characters",
             },
             present_address: {
                 required: "Enter Your Present Address",
