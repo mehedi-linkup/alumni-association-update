@@ -94,7 +94,7 @@ footer {
 .contactinfo {
     list-style-type: none;
     /*margin: 0;*/
-    margin-left: -33px;
+    /* margin-left: -33px; */
     text-align: left;
 }
 

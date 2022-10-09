@@ -436,6 +436,10 @@ p {
         width: 100%;
         clear: both;
     }
+    #primary-slider {
+        padding-left: 0;
+        padding-right: 0;
+    }
     .gallery-title:before {}
     .gallery-title:after {}
     .our-committee:before {
@@ -455,9 +459,6 @@ p {
     }
     .title h2 {
         font-size: 18px!important;
-    }
-    .carousel-item img {
-        height: 338px;
     }
 }
 
@@ -571,7 +572,12 @@ p {
     width: 100%;
     height: 400px;
 }
-
+@media only screen and (max-width: 767px) {
+    .carousel-item img {
+        height: 338px;
+        object-fit: contain;
+    }
+}
 .slider-left {
     width: 85%;
 }

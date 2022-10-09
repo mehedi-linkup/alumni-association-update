@@ -21,7 +21,7 @@ class WelcomeNotesController extends Controller
     {
         $welcomenotes = WelcomeNotes::findOrFail($request->id);
         return view('admin.welcome.view-welcome', compact('welcomenotes'));
-        return response()->json($welcomenotes);
+        // return response()->json($welcomenotes);
     }
 
     public function UpdateNotes(Request $request)

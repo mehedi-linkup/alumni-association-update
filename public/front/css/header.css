@@ -254,6 +254,7 @@ btn-danger a:hover {
 .master-identity {
     margin-top: 21px;
     margin-bottom: 2%;
+    height: 139px; 
 }
 
 .master-identity h1 {
@@ -418,7 +419,11 @@ button {
     overflow: hidden;
 }
 
-
+.countdown {
+    position: absolute;
+    top: 12px;
+    right:10px;
+} 
 /*media query*/
 
 @media screen and (min-width: 768px) {
@@ -441,6 +446,9 @@ button {
         width: 100%;
         padding: 0 15px;
     }
+    .countdown {
+       display: none;
+    }
     .logo-left {
         text-align: center!important;
     }
@@ -453,6 +461,7 @@ button {
     .master-identity {
         margin-top: 4px!important;
         margin-bottom: 2%;
+        height: auto; 
     }
     .master-identity h1 {
         font-size: 15px!important;
@@ -465,6 +474,9 @@ button {
     }
     #text {
         margin-left: 23%!important;
+    }
+    #text1 {
+        margin-left: 25%!important;
     }
     .header-social-wrapper {
         display: none!important;
@@ -499,6 +511,7 @@ button {
     }
     #main_page #header-top-master {
         padding-top: 5px!important;
+        height: 196px;
     }
     .site-header {
         clear: both;
@@ -653,6 +666,9 @@ button {
     #text {
         font-size: 80%;
     }
+    #text1 {
+        font-size: 80%;
+    }
     .main-navigation ul a {
         border-bottom: 1px solid #dddddd;
     }
@@ -679,17 +695,11 @@ button {
         width: 97%;
     }
 }
-
 @media only screen and (max-width: 479px) {
     #emergency-contact li {
         margin: 10px 0;
         padding: 0 6px;
         font-size: 12px;
-    }
-    #main_page #header-top-master {
-        background-position: center top;
-        background-size: 100% auto;
-        padding-top: 60px;
     }
     .master-title {
         clear: none;

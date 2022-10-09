@@ -39,197 +39,195 @@
          enctype="multipart/form-data">
          @csrf
          <div class="card-body">
-             <div class="row">
                  <div class="container">
-                     <div class="label-title1">
-                         <label class="form-label1"
-                             style="font-size: 23px;margin-top: -33px; color: #0d0f10;">ব্যক্তিগত তথ্য</label>
-                     </div>
-                     <div class="form-top">
-                         <div class="row mb-2">
-                             <div class="col-lg-2 col-md-3 col-12">
-                                 <label class="">নাম
-                                    <span class="span-star">*</span></label>
-                             </div>
-                             <div class="col-lg-6 col-md-7 col-12">
-                                 <input type="text"
-                                     class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"
-                                     name="name" value="" id="name" placeholder="নাম">
-
-                                 @if ($errors->has('name'))
-                                     <span class="invalid-feedback">
-                                         <strong>{{ $errors->first('name') }}</strong>
-                                     </span>
-                                 @endif
-                             </div>
-                         </div>
-                         <div class="row mb-2">
-                             <div class="col-lg-2 col-md-3 col-12">
-                                 <label class="form-label">পিতার নাম<span class="span-star">*</span></label>
-                             </div>
-                             <div class="col-lg-6 col-md-7 col-12">
-                                 <input type="text"
-                                     class="form-control{{ $errors->has('fathers_name') ? ' is-invalid' : '' }}"
-                                     name="fathers_name" id="fathers_name" placeholder="পিতার নাম">
-                                 @if ($errors->has('name'))
-                                     <span class="invalid-feedback">
-                                         <strong>{{ $errors->first('fathers_name') }}</strong>
-                                     </span>
-                                 @endif
-                             </div>
-                         </div>
-                         <div class="row mb-2">
-                             <div class="col-lg-2 col-md-3 col-12">
-                                 <label class="form-label">মাতার নাম<span class="span-star">*</span></label>
-                             </div>
-                             <div class="col-lg-6 col-md-7 col-12">
-                                 <input type="text"
-                                     class="form-control{{ $errors->has('mother_name') ? ' is-invalid' : '' }}"
-                                     name="mother_name" id="mother_name" placeholder="মাতার নাম">
-                                 @if ($errors->has('mother_name'))
-                                     <span class="invalid-feedback">
-                                         <strong>{{ $errors->first('mother_name') }}</strong>
-                                     </span>
-                                 @endif
-                             </div>
-                         </div>
-                         <div class="row mb-2">
-                             <div class="col-lg-2 col-md-3 col-12">
-                                 <label class="form-label">রক্তের গ্রুপ
-                                 </label>
-                             </div>
-                             <div class="col-lg-6 col-md-7 col-12">
-                                 <select id="blood_group" name="blood_group" class="select"
-                                     style=" width: 100%;">
-                                     <option value="A+">A+(ve)</option>
-                                     <option value="A-">A-(ve)</option>
-                                     <option value="AB+">AB+(ve)</option>
-                                     <option value="AB-">AB-(ve)</option>
-                                     <option value="B+">B+(ve)</option>
-                                     <option value="B-">B-(ve)</option>
-                                     <option value="O+">O+(ve)</option>
-                                     <option value="O-">O-(ve)</option>
-                                 </select>
-                                 @if ($errors->has('blood_group_id'))
-                                     <span class="invalid-feedback">
-                                         <strong>{{ $errors->first('blood_group') }}</strong>
-                                     </span>
-                                 @endif
-                             </div>
-                         </div>
-                         <div class="row mb-2">
-                             <div class="col-lg-2 col-md-3 col-12">
-                                 <label class="form-label">লিঙ্গ
-                                 </label>
-                             </div>
-                             <div class="col-lg-6 col-md-7 col-12">
-                                 <select id="gender" name="gender" class="select-gender" style=" width: 100%;">
-                                     <option value="">নির্বাচন করুন
-                                    </option>
-                                     <option value="Male">পুরুষ</option>
-                                     <option value="Female">মহিলা</option>
-                                 </select>
-                                 @if ($errors->has('gender'))
-                                     <span class="invalid-feedback">
-                                         <strong>{{ $errors->first('gender') }}</strong>
-                                     </span>
-                                 @endif
-                             </div>
-                         </div>
-                         <div class="row mb-2">
-                             <div class="col-lg-2 col-md-3 col-12">
-                                 <label class="form-label">পেশা<span class="span-star">*</span></label>
-                             </div>
-                             <div class="col-lg-6 col-md-7 col-12">
-                                 <input type="text"
-                                     class="form-control{{ $errors->has('occupation') ? ' is-invalid' : '' }}"
-                                     id="occupation" name="occupation" placeholder="পেশা">
-                                 @if ($errors->has('occupation'))
-                                     <span class="invalid-feedback">
-                                         <strong>{{ $errors->first('occupation') }}</strong>
-                                     </span>
-                                 @endif
-                             </div>
-                         </div>
-                         <div class="row ">
-                             <div class="col-lg-2 col-md-3 col-12">
-                                 <label class="form-label">ইমেইল</label>
-                             </div>
-                             <div class="col-lg-6 col-md-7 col-12">
-                                 <input type="text"
-                                     class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
-                                     name="email" id="email" placeholder="ইমেইল">
-                                 @if ($errors->has('email'))
-                                     <span class="invalid-feedback">
-                                         <strong>{{ $errors->first('email') }}</strong>
-                                     </span>
-                                 @endif
-                             </div>
-                         </div>
-                         <div class="row ">
-                            <div class="col-lg-2 col-md-3 col-12">
-                                <label class="form-label mt-2 mb-0">ড্রেস সাইজ<span class="span-star">*</span></label>
+                    <div class="label-title1">
+                        <label class="form-label1"
+                            style="font-size: 23px; color: #0d0f10;">ব্যক্তিগত তথ্য</label>
+                    </div>
+                    <div class="form-top">
+                        <div class="row mb-2">
+                            <div class="col-lg-3 col-md-4 col-12">
+                                <label class="">নাম
+                                <span class="span-star">*</span></label>
                             </div>
                             <div class="col-lg-6 col-md-7 col-12">
+                                <input type="text"
+                                    class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"
+                                    name="name" value="" id="name" placeholder="নাম">
 
-                                <div class="input-group mt-2" id="dress">
-                                    <div class="form-check d-flex align-items-center mt-0">
-                                        <input
-                                            class="form-check-input {{ $errors->has('dress') ? ' is-invalid' : '' }}"
-                                            value="M" type="radio" name="dress"
-                                            id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            M
-                                        </label>
-                                    </div>
-                                    <div class="form-check d-flex align-items-center mt-0">
-                                        <input
-                                            class="form-check-input {{ $errors->has('dress') ? ' is-invalid' : '' }}"
-                                            value="L" type="radio" name="dress"
-                                            id="flexRadioDefault2">
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                            L
-                                        </label>
-                                    </div>
-                                    <div class="form-check d-flex align-items-center mt-0">
-                                        <input
-                                            class="form-check-input {{ $errors->has('dress') ? ' is-invalid' : '' }}"
-                                            value="XL" type="radio" name="dress"
-                                            id="flexRadioDefault3">
-                                        <label class="form-check-label" for="flexRadioDefault3">
-                                            XL
-                                        </label>
-                                    </div>
-                                    <div class="form-check d-flex align-items-center mt-0">
-                                        <input
-                                            class="form-check-input {{ $errors->has('dress') ? ' is-invalid' : '' }}"
-                                            value="XXL" type="radio" name="dress"
-                                            id="flexRadioDefault4">
-                                        <label class="form-check-label" for="flexRadioDefault4">
-                                            XXL
-                                        </label>
-                                    </div>
-                                    <div class="form-check d-flex align-items-center mt-0">
-                                        <input
-                                            class="form-check-input {{ $errors->has('dress') ? ' is-invalid' : '' }}"
-                                            value="XXXL" type="radio" name="dress"
-                                            id="flexRadioDefault5">
-                                        <label class="form-check-label" for="flexRadioDefault5">
-                                            XXXL
-                                        </label>
-                                    </div>
-                                </div>
-
-                                @if ($errors->has('dress'))
+                                @if ($errors->has('name'))
                                     <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('dress') }}</strong>
+                                        <strong>{{ $errors->first('name') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
-                     </div>
+                        <div class="row mb-2">
+                            <div class="col-lg-3 col-md-4 col-12">
+                                <label class="form-label">পিতার নাম<span class="span-star">*</span></label>
+                            </div>
+                            <div class="col-lg-6 col-md-7 col-12">
+                                <input type="text"
+                                    class="form-control{{ $errors->has('fathers_name') ? ' is-invalid' : '' }}"
+                                    name="fathers_name" id="fathers_name" placeholder="পিতার নাম">
+                                @if ($errors->has('name'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('fathers_name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-lg-3 col-md-4 col-12">
+                                <label class="form-label">মাতার নাম<span class="span-star">*</span></label>
+                            </div>
+                            <div class="col-lg-6 col-md-7 col-12">
+                                <input type="text"
+                                    class="form-control{{ $errors->has('mother_name') ? ' is-invalid' : '' }}"
+                                    name="mother_name" id="mother_name" placeholder="মাতার নাম">
+                                @if ($errors->has('mother_name'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('mother_name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-lg-3 col-md-4 col-12">
+                                <label class="form-label">রক্তের গ্রুপ
+                                </label>
+                            </div>
+                            <div class="col-lg-6 col-md-7 col-12">
+                                <select id="blood_group" name="blood_group" class="select"
+                                    style=" width: 100%;">
+                                    <option value="A+">A+(ve)</option>
+                                    <option value="A-">A-(ve)</option>
+                                    <option value="AB+">AB+(ve)</option>
+                                    <option value="AB-">AB-(ve)</option>
+                                    <option value="B+">B+(ve)</option>
+                                    <option value="B-">B-(ve)</option>
+                                    <option value="O+">O+(ve)</option>
+                                    <option value="O-">O-(ve)</option>
+                                </select>
+                                @if ($errors->has('blood_group_id'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('blood_group') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-lg-3 col-md-4 col-12">
+                                <label class="form-label">লিঙ্গ
+                                </label>
+                            </div>
+                            <div class="col-lg-6 col-md-7 col-12">
+                                <select id="gender" name="gender" class="select-gender" style=" width: 100%;">
+                                    <option value="">নির্বাচন করুন
+                                </option>
+                                    <option value="Male">পুরুষ</option>
+                                    <option value="Female">মহিলা</option>
+                                </select>
+                                @if ($errors->has('gender'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('gender') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-lg-3 col-md-4 col-12">
+                                <label class="form-label">পেশা<span class="span-star">*</span></label>
+                            </div>
+                            <div class="col-lg-6 col-md-7 col-12">
+                                <input type="text"
+                                    class="form-control{{ $errors->has('occupation') ? ' is-invalid' : '' }}"
+                                    id="occupation" name="occupation" placeholder="পেশা">
+                                @if ($errors->has('occupation'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('occupation') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-lg-3 col-md-4 col-12">
+                                <label class="form-label">ইমেইল</label>
+                            </div>
+                            <div class="col-lg-6 col-md-7 col-12">
+                                <input type="text"
+                                    class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
+                                    name="email" id="email" placeholder="ইমেইল">
+                                @if ($errors->has('email'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="row ">
+                        <div class="col-lg-3 col-md-4 col-12">
+                            <label class="form-label mt-2 mb-0">ড্রেস সাইজ<span class="span-star">*</span></label>
+                        </div>
+                        <div class="col-lg-6 col-md-7 col-12">
+
+                            <div class="input-group mt-2" id="dress">
+                                <div class="form-check d-flex align-items-center mt-0">
+                                    <input
+                                        class="form-check-input {{ $errors->has('dress') ? ' is-invalid' : '' }}"
+                                        value="M" type="radio" name="dress"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        M
+                                    </label>
+                                </div>
+                                <div class="form-check d-flex align-items-center mt-0">
+                                    <input
+                                        class="form-check-input {{ $errors->has('dress') ? ' is-invalid' : '' }}"
+                                        value="L" type="radio" name="dress"
+                                        id="flexRadioDefault2">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        L
+                                    </label>
+                                </div>
+                                <div class="form-check d-flex align-items-center mt-0">
+                                    <input
+                                        class="form-check-input {{ $errors->has('dress') ? ' is-invalid' : '' }}"
+                                        value="XL" type="radio" name="dress"
+                                        id="flexRadioDefault3">
+                                    <label class="form-check-label" for="flexRadioDefault3">
+                                        XL
+                                    </label>
+                                </div>
+                                <div class="form-check d-flex align-items-center mt-0">
+                                    <input
+                                        class="form-check-input {{ $errors->has('dress') ? ' is-invalid' : '' }}"
+                                        value="XXL" type="radio" name="dress"
+                                        id="flexRadioDefault4">
+                                    <label class="form-check-label" for="flexRadioDefault4">
+                                        XXL
+                                    </label>
+                                </div>
+                                <div class="form-check d-flex align-items-center mt-0">
+                                    <input
+                                        class="form-check-input {{ $errors->has('dress') ? ' is-invalid' : '' }}"
+                                        value="XXXL" type="radio" name="dress"
+                                        id="flexRadioDefault5">
+                                    <label class="form-check-label" for="flexRadioDefault5">
+                                        XXXL
+                                    </label>
+                                </div>
+                            </div>
+
+                            @if ($errors->has('dress'))
+                                <span class="invalid-feedback">
+                                    <strong>{{ $errors->first('dress') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+                    </div>
                  </div>
-             </div>
          </div>
          <div class="clearfix" style="padding-bottom: 20px">
          </div>
@@ -238,7 +236,7 @@
                  <div class="container">
                      <div class="label-title1">
                          <label class="form-label1"
-                             style="font-size: 23px; margin-top: -33px;color: #0d0f10;">ঠিকানা</label>
+                             style="font-size: 23px; color: #0d0f10;">ঠিকানা</label>
                      </div>
                      <div class="form-top">
                          <div class="row mb-2 ">
@@ -338,7 +336,6 @@
                  <div class="container">
                      <div class="label-title1">
                          <label class="form-label" style="font-size: 23px;
-                                       margin-top: -33px;
                                        color: #0d0f10;">লগইন তথ্য</label>
                      </div>
                      <div class="form-top">

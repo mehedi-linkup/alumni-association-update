@@ -35,18 +35,18 @@ class HomeController extends Controller
         $t_collection = 0;
         $m_collection = 0;
         $all = DB::table('transaction')->where("status","Success")->orderby("created_at","desc")->get();
-        foreach($all as $al){
-            if(date('M',strtotime($al->created_at)) == $month){
-                $m_collection += intval($al->amount);
+        foreach($all as $item){
+            if(date('M',strtotime($item->created_at)) == $month){
+                $m_collection += intval($item->amount);
             }
-            if(date('d',strtotime($al->created_at)) == $today){
-                $t_collection += intval($al->amount);
+            if(date('d',strtotime($item->created_at)) == $today){
+                $t_collection += intval($item->amount);
             }
-            
         }
-    
+        $totalAmount = $all->sum('amount');
+        // return 'Month =' . $m_collection . ',' . 'Day =' .  $t_collection;
         // dd($min_passing_year,$max_passing_year,$passing_year);
-        return view('admin.home',compact('min_passing_year','max_passing_year','t_collection','m_collection'));
+        return view('admin.home',compact('min_passing_year','max_passing_year','t_collection','m_collection', 'totalAmount'));
     }
 
     public function CollectionReport(){

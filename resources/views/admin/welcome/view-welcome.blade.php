@@ -38,32 +38,6 @@
             </div>
         </div>
     </section>
-    <!-- <section class="content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card mt-3">
-                        <div class="card-body">
-                            <table id="list" class="table dt-responsive table-bordered table-striped nowrap">
-                                <thead>
-                                <tr>
-                                    <th>SL</th>
-                                    <th>Name</th>
-                                    <th>Date</th>
-                                    <th>Description</th>
-                                    <th>Image</th>
-                                    <th>Action</th>
-                                </tr>
-                                </thead>
-                                <tbody id="welcome_list_data">
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 @endsection
 @include('admin.welcome.form_js')
 @section('script')

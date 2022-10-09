@@ -2,18 +2,19 @@
 
 namespace App\Modules\User\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Libraries\CommonFunction;
-use App\Libraries\Encryption;
 use App\User;
 use Carbon\Carbon;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use App\Libraries\Encryption;
 use Yajra\DataTables\DataTables;
+use App\Libraries\CommonFunction;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Redirect;
 
 class UserController extends Controller
 {
@@ -213,6 +214,56 @@ class UserController extends Controller
             Session::flash("error","User Deleted Successfully");
             return response()->json($msg);
         }  catch (\Exception $e) {
+            DB::rollback();
+            Session::flash('error', CommonFunction::showErrorPublic($e->getMessage()) . '[UC-1006]');
+            return Redirect::back()->withInput();
+        }
+
+    }
+
+    public function profile() {
+        $id = Auth::user()->id;
+        try {
+            $user = User::findOrFail($id);
+            return view('User::edit_single', compact('user'));
+        } catch (\Exception $e) {
+            DB::rollback();
+            Session::flash('error', CommonFunction::showErrorPublic($e->getMessage()) . '[UC-1010]');
+            return Redirect::back();
+        }
+    }
+    public function profileUpdate(Request $request)
+    {
+        $user_id = Auth::user()->id;
+        $user = User::findOrFail($user_id);
+
+        try {
+            DB::beginTransaction();
+            $user->name = $request->name;
+            $user->username = $request->username;
+            $user->email = $request->email;
+            // $user->phone = $request->phone;
+            $user->user_type = $request->user_type;
+            // $user->password = bcrypt($request->password);
+            // $user->status = empty($request->status) ? 0 : 1;
+            $image = $request->file('image');
+            if ($image && $request->image != '') {
+                if (file_exists($user->image)) {
+                    unlink($user->image);
+                }
+                $imageName = date('YmdHi').$image->getClientOriginalName();
+                $image->move('uploads/admin', $imageName);
+                
+              
+                $user->image = 'uploads/admin/'.$imageName;
+            }
+            $user->save();
+            DB::commit();
+
+            Session::flash('success', 'The user has updated successfully!');
+            return redirect()->back();
+
+        } catch (\Exception $e) {
             DB::rollback();
             Session::flash('error', CommonFunction::showErrorPublic($e->getMessage()) . '[UC-1006]');
             return Redirect::back()->withInput();

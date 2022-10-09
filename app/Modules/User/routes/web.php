@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 Route::group(['module' => 'user', 'prefix' => 'user', 'middleware' => ['auth', 'verified']], function () {
 
 //    Route::get('/', 'UsersController@index')->name('users.index');
@@ -18,14 +20,15 @@ Route::group(['module' => 'user', 'prefix' => 'user', 'middleware' => ['auth', '
     Route::get('edit/{id}', "UserController@edit")->name('user_edit');
     Route::post('remove', "UserController@DeleteUser")->name('user_remove');
 
-    // User personal profile update
-    Route::get('profile', 'UsersController@profileUpdate');
-    Route::post('profile-update', 'UsersController@profileUpdateStore');
-
+    
     Route::get('change-password', 'UsersController@changePasswordForm');
     Route::post('update-password', 'UsersController@changePasswordStore');
 
     // User status
     Route::post('status', 'UsersController@userStatus');
-
+    
+    // User personal profile update
+    Route::get('profile', 'UserController@profile')->name('profile');
+    Route::post('profile-update', 'UserController@profileUpdate')->name('profile_update');
+    
 });

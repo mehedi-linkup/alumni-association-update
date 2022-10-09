@@ -5,44 +5,11 @@
 @endsection
 @section('content')
     <div class="clearfix" style="padding-top: 10px">
-
     </div>
     <section class="slider">
         <div id="content" class="main-content">
             <div class="container">
                 <div class="primary-slider" id="primary-slider">
-
-                    {{-- slider start here --}}
-                    {{-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"> --}}
-                    {{-- <div class="carousel-inner"> --}}
-                    {{-- <div class="carousel-item active"> --}}
-                    {{-- <img class="d-block w-100" src="{{asset('front/images/slider1.jpg')}}" --}}
-                    {{-- alt="First slide"> --}}
-                    {{-- </div> --}}
-                    {{-- <div class="carousel-item"> --}}
-                    {{-- <img class="d-block w-100" src="{{asset('front/images/image3.jpg')}}" --}}
-                    {{-- alt="Second slide"> --}}
-                    {{-- </div> --}}
-                    {{-- <div class="carousel-item"> --}}
-                    {{-- <img class="d-block w-100" src="{{asset('front/images/image6.jpg')}}" alt="Third slide"> --}}
-                    {{-- </div> --}}
-                    {{-- </div> --}}
-                    {{-- <a class="carousel-control-prev" href="#carouselExampleControls" role="button" --}}
-                    {{-- data-slide="prev"> --}}
-                    {{-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> --}}
-                    {{-- <span class="sr-only">Previous</span> --}}
-                    {{-- </a> --}}
-                    {{-- <a class="carousel-control-next" href="#carouselExampleControls" role="button" --}}
-                    {{-- data-slide="next"> --}}
-                    {{-- <span class="carousel-control-next-icon" aria-hidden="true"></span> --}}
-                    {{-- <span class="sr-only">Next</span> --}}
-                    {{-- </a> --}}
-                    {{-- </div> --}}
-                    {{-- another slider for testing --}}
-
-
-
-
                     <div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
                         <!-- slides -->
                         <div class="row">
@@ -51,11 +18,8 @@
                                     @foreach ($sliders as $key => $slider)
                                         <div class="carousel-item {{ $key == 0 ? 'active' : '' }}"><img
                                                 src="{{ asset($slider->image) }}" alt="Hills"></div>
-
                                     @endforeach
-
                                 </div>
-
                                 <!-- Left right -->
                                 <a class="carousel-control-prev" href="#custCarousel" data-slide="prev">
                                     <span class="carousel-control-prev-icon"></span>
@@ -63,31 +27,11 @@
                                 <a class="carousel-control-next" href="#custCarousel" data-slide="next">
                                     <span class="carousel-control-next-icon"></span>
                                 </a>
-
-                                <!-- Thumbnails -->
                             </div>
-
-                            <!--<div class="slider-right">-->
-                            <!--    <ol class="carousel-indicators list-inline">-->
-
-                            <!--        @foreach ($sliders as $key => $slider)-->
-                            <!--            <li class="list-inline-item {{ $key == 0 ? 'active' : '' }}"><a-->
-                            <!--                    id="carousel-selector-0" class="selected" data-slide-to="0"-->
-                            <!--                    data-target="#custCarousel"> <img src="{{ $slider->image }}"-->
-                            <!--                        class="img-fluid"> </a></li>-->
-                            <!--        @endforeach-->
-
-
-                            <!--    </ol>-->
-                            <!--</div>-->
                         </div>
                     </div>
                     {{-- end slider --}}
-                    {{-- slider end here --}}
-                    {{-- About us Section is start here --}}
-                    {{-- <div class="clearfix" style="padding-top: 10px"> --}}
 
-                    {{-- </div> --}}
                     <section class="about-us">
                         <div class="card-header section-title">
                             <h3 class="">{{ $welcomenotes->title }}</h3>
@@ -112,7 +56,7 @@
                         </div>
                     </section>
                     {{-- About Us section End Here --}}
-                    {{-- News & Announcement Section is start here --}}
+
                     <div class="clearfix" style="padding-top: 10px">
 
                     </div>

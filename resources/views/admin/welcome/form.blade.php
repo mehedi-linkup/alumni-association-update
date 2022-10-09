@@ -33,8 +33,8 @@
         </div>
      
         <input type="hidden" name="welcomenotes_id" id="welcomenotes_id" value="{{old('welcomenotes_id',$welcomenotes->id)}}">
-        <div class="col-md-6">
-            {{-- name --}}
+        {{-- <div class="col-md-6">
+           
             <div class="form-group">
                 <label for="title" class="form-label"> Date <span class='required-star'></span></label>
                 <input id="date" type="text" data-select="datepicker"
@@ -48,7 +48,7 @@
                     </span>
                 @endif
             </div>
-        </div>
+        </div> --}}
         <div class="col-md-6">
             <div class="form-group" style="display: block">
                 <label for="image" class="form-label">Image</label>

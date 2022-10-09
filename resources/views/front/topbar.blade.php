@@ -1,4 +1,3 @@
-@section('topbar')
 <div id="header-top">
     <div class="container">
         <div id="emergency-contact">
@@ -23,17 +22,17 @@
     </div>
 </div>
 
-<header id="header-top-master" class="site-header" role="banner">
+<header id="header-top-master" class="site-header" role="banner" style="position: relative">
     <div class="container">
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-12 col-md-3 d-md-flex align-items-center">
                 <div class="logo-left">
                     <a href="{{route('/')}}">
                         <img src="{{asset('front/images/ali-azam-01.jpg')}}" class="custom-logo" alt="Ali azam School">
                     </a>
                 </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-12 col-md-6">
                 <div class="master-identity">
                     <h1 class="master-title"> Ali Azam School & College Alumni Association</h1>
                     <p class="master-sulogan" style="margin-bottom:5px!important; font-style:italic; font-family:roboto;">One Purpose, One Mission, One Dream for Together</p>
@@ -49,13 +48,14 @@
                 </div>
 
             </div>
-            <div class="col-md-2">
+            <div class="col-12 col-md-3 d-md-flex align-items-center">
                 <div class="logo-right">
                     <img width="195" height="195" src="{{asset('front/images/100-year.jpg')}}" alt="Ali azam School">
                 </div>
             </div>
         </div>
     </div>
+    <iframe class="countdown" width="195" height="auto" src="{{asset('front/html/iframe.html')}}" frameborder="0"></iframe>
 </header>
 <div id="main-header-nav" class="clear-fix">
     <div class="container">
@@ -104,19 +104,6 @@
                                 </li>
                             </ul>
                         </li>
-                        <!-- <li id="menu-item-604" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-604" aria-haspopup="true"><a href="#">Teacher</a>
-                            <button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text"></span></button>
-                            <ul class="sub-menu">
-                                <li id="menu-item"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-605">
-                                    <a href="{{route('running-teacher')}}">Runing Teacher</a>
-                                </li>
-                                <li id="menu-item"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-605">
-                                    <a href="{{route('retired-teacher')}}">Retired Teacher</a>
-                                </li>
-                            </ul>
-                        </li> -->
                         <li id="menu-item-604" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-604" aria-haspopup="true"><a href="">Committee</a>
                             <button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text"></span></button>
                             <ul class="sub-menu">
@@ -153,9 +140,7 @@
                     </ul>
 
                 </div>
-            </div><!-- .menu-content -->
-        </nav><!-- #site-navigation -->
-    </div> <!-- .container -->
+            </div>
+        </nav>
+    </div>
 </div>
-{{-- end main header nav--}}
-@endsection

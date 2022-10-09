@@ -1,4 +1,3 @@
-@section('footer')
     <div class="clearfix" style="padding-top: 20px">
 
     </div>
@@ -6,12 +5,12 @@
     <div class="footer-section">
         <div class="container">
             <div class="row">
-                <div class="col-6 offset-3">
+                <div class="col-12 col-md-6 offset-md-3">
                     <img src="{{ asset('uploads/web_footer/shurjoPay_Footer_1.png') }}" alt="" class="img-fluid banner-footer">
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-6 col-12">
                     <div class="about-us" style="font-family: kalpurush">
                         <h4>Ali Azam School & College</h4>
                         <p>
@@ -19,10 +18,9 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-6 col-12">
                     <h4>Quick Links</h4>
-                    <div class="row">
-{{--                        <div class="col-md-4 col-4">--}}
+                    <div class="">
                             <ul>
                                 <li><a href="{{route('/')}}">Home</a></li>
                                 <li><a href="{{route('about-history',['type'=> 'History'])}}">About Us</a></li>
@@ -31,11 +29,9 @@
                                 <li><a href="{{route('terms-conditions')}}">Terms and Conditions</a></li>
                                 <li><a href="{{route('privacy-policy')}}">Privacy Policy</a></li>
                             </ul>
-{{--                        </div>--}}
-
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-6 col-12">
                     <h4>Contact Info</h4>
                     <ul class="contactinfo">
                         <li>
@@ -50,7 +46,7 @@
 
                     </ul>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-6 col-12">
                     <h4>Follow Us</h4>
                     <ul class="social-icons p-0">
                         <li>
@@ -85,14 +81,10 @@
             <div class="float-lg-right">
                 Design & Developed by | <a target="_blank" href="https://www.bigsoftwareltd.com">Big Technology Limited</a>
             </div>
-{{--            Copyright © 2020 --}}
             <div class="clearfix" style="margin-bottom: 0">
-
             </div>
         </div>
     </div>
 <section class="container">
     <button onclick="topFunction()" class="up-button" id="myBtn" title="Go to top"><i class="fas fa-angle-up"></i></button>
 </section>
-    <!-- End  footer section -->
-@endsection
