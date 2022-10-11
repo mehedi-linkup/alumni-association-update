@@ -34,7 +34,7 @@ Route::get('/contact-us', 'FrontController@contacts')->name('contact-us');
 Route::post('/save_contact', 'FrontController@SaveContact')->name('save_contact');
 Route::get('/signup', 'FrontController@registration')->name('signup');
 Route::get('/forgot_password', 'FrontController@ForgotPassword')->name('forgot_password');
-Route::get('/password_email', 'FrontController@PasswordEmail')->name('password_email');
+Route::post('/password_email', 'FrontController@PasswordEmail')->name('password_email');
 Route::post('/password_code', 'FrontController@PasswordCode')->name('password_code');
 Route::get('/change_password', 'FrontController@ChangePassword')->name('change_password');
 Route::get('view-soronika', 'FrontController@ViewSoronika')->name('view-soronika');
@@ -101,11 +101,6 @@ Route::post('delete-committee', "CommitteeController@DeleteCommittee")->name('de
 Route::get('edit-notes', 'WelcomeNotesController@EditNotes')->name('edit-notes');
 Route::post('update-notes', "WelcomeNotesController@UpdateNotes")->name('update-notes');
 //End Welcome Notes routes end here
-
-Route::get('participant-sms-activelist', 'ParticipantSmsController@index')->name('sms-active-list');
-Route::get('participant-sms-inactivelist', 'ParticipantSmsController@index')->name('sms-inactive-list');
-
-
 
 //Welcome News is start here
 Route::get('edit-news-notes', 'WelcomeNewsNotesController@EditNewsNote')->name('edit-news-notes');

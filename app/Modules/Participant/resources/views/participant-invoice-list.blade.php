@@ -58,33 +58,33 @@
 
                     <div class="col-sm-6 text-sm-right order-sm-1"> <strong></strong>
                         <address>
-                            <div class="invoice-logo"><img width="100"
+                            <div class="invoice-logo"><img style="object-fit:contain" width="120px" height="120px"
                                     @if (!$participant->image == '') src="{{ asset($participant->image) }}"   @elseif($participant->gender == 'Male') src="{{ asset('front/images/male.png') }}" @else src="{{ asset('front/images/female.png') }}" @endif
                                     alt="Invoice logo"></div>
                         </address>
                     </div>
                     <div class="col-sm-6 order-sm-0"> <strong>Student Information</strong>
-                        <p class="mb-0">Name: {{ $participant->name }}</p>
-                        <p class="mb-0"> Phone:{{ $participant->phone }}</p>
-                        <p class="mb-0">Email:{{ $participant->email }}</p>
-
+                        <p class="mb-0 text-nowrap overflow-hidden">Name: {{ $participant->name }}</p>
+                        <p class="mb-0"> Phone: {{ $participant->phone }}</p>
+                        <p class="mb-0">Email: {{ $participant->email }}</p>
+                        <p class="mb-0">Dress Size: {{ $participant->dress }}</p>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-sm-12">
-                        <p class="booking" style="font-weight: 600;">Details Information : </p>
+                        <p class="booking" style="font-weight:600;">Details Information : </p>
                     </div>
                     <div class="col-sm-6">
                         <address>
                             <p class="mb-0"> Fathers Name: {{ $participant->fathers_name }}</p>
                             <p class="mb-0"> Mother Name: {{ $participant->mother_name }}</p>
-                            <p class="mb-0"> Present Address: {{ $participant->present_address }}</p>
+                            <p class="mb-0" style="height: 66px"> Present Address: {{ $participant->present_address }}</p>
                         </address>
                     </div>
                     <div class="col-sm-6">
                         <address>
-                            <p class="mb-0"> Permanent Address: {{ $participant->permanent_address }}</p>
+                            <p class="mb-0" style="height: 66px"> Permanent Address: {{ $participant->permanent_address }}</p>
                             <p class="mb-0"> Occupation: {{ $participant->occupation }}</p>
                             <p class="mb-0"> Passsing Year: {{ $participant->passing_year }}</p>
                         </address>
@@ -99,17 +99,17 @@
                                 <div class="row">
                                   <div class="col-md-4">                                   
                                           @if ($participant->image != '')
-                                          <img width="100%" src="{{ asset($participant->image) }}" alt="">
+                                          <img style="object-fit:contain" width="120px" height="120px" src="{{ asset($participant->image) }}" alt="">
                                           @elseif($participant->gender == 'Male')
-                                          <img width="100%" src="{{ asset('front/images/male.png') }}" alt="">
+                                          <img style="object-fit:contain" width="120px" height="120px" src="{{ asset('front/images/male.png') }}" alt="">
                                           @else
-                                          <img width="100%" src="{{ asset('front/images/female.png') }}" alt="">
+                                          <img style="object-fit:contain" width="120px" height="120px" src="{{ asset('front/images/female.png') }}" alt="">
                                           @endif
                                   </div>
                                   <div class="col-md-8 image text-center">
                                       <?php
                                       echo SimpleSoftwareIO\QrCode\Facades\QrCode::generate('Name: ' . $participant->name . "\r\n Id: " . intval($participant->registration_id) . "\r\n" . 'lunch'); ?>
-                                      <p class="mb-0">
+                                      <p class="mb-0" style="height:66px">
                                           {{ $participant->name }} <br>
                                           Phone# {{ $participant->phone }}<br>
                                       </p>
@@ -122,17 +122,17 @@
                             <div class="row">
                               <div class="col-md-4">   
                                 @if ($participant->image != '')
-                                <img width="100%" src="{{ asset($participant->image) }}" alt="">
+                                <img style="object-fit:contain" style="object-fit:contain" style="object-fit:contain" style="object-fit:contain" width="120px" height="120px" src="{{ asset($participant->image) }}" alt="">
                                 @elseif($participant->gender == 'Male')
-                                <img width="100%" src="{{ asset('front/images/male.png') }}" alt="">
+                                <img style="object-fit:contain" style="object-fit:contain" style="object-fit:contain" style="object-fit:contain" width="120px" height="120px" src="{{ asset('front/images/male.png') }}" alt="">
                                 @else
-                                <img width="100%" src="{{ asset('front/images/female.png') }}" alt="">
+                                <img style="object-fit:contain" style="object-fit:contain" style="object-fit:contain" style="object-fit:contain" width="120px" height="120px" src="{{ asset('front/images/female.png') }}" alt="">
                                 @endif
                               </div>
                               <div class="col-md-8 image text-center">
                                   <?php
                                   echo SimpleSoftwareIO\QrCode\Facades\QrCode::generate('Name: ' . $participant->name . "\r\n Id: " . intval($participant->registration_id + 1) . "\r\n" . 'lunch'); ?>
-                                  <p class="mb-0">
+                                  <p class="mb-0" style="height:66px">
                                       {{ $participant->name }} <br>
                                       Phone# {{ $participant->phone }}<br>
                                   </p>
@@ -146,17 +146,17 @@
                               <div class="row">
                                 <div class="col-md-4">   
                                   @if ($participant->image != '')
-                                  <img width="100%" src="{{ asset($participant->image) }}" alt="">
+                                  <img style="object-fit:contain" style="object-fit:contain" style="object-fit:contain" width="120px" height="120px" src="{{ asset($participant->image) }}" alt="">
                                   @elseif($participant->gender == 'Male')
-                                  <img width="100%" src="{{ asset('front/images/male.png') }}" alt="">
+                                  <img style="object-fit:contain" style="object-fit:contain" style="object-fit:contain" width="120px" height="120px" src="{{ asset('front/images/male.png') }}" alt="">
                                   @else
-                                  <img width="100%" src="{{ asset('front/images/female.png') }}" alt="">
+                                  <img style="object-fit:contain" style="object-fit:contain" style="object-fit:contain" width="120px" height="120px" src="{{ asset('front/images/female.png') }}" alt="">
                                   @endif
                                 </div>
                                 <div class="col-md-8 image text-center">
                                     <?php
                                     echo SimpleSoftwareIO\QrCode\Facades\QrCode::generate('Name: ' . $participant->name . "\r\n Id: " . intval($participant->registration_id + 2) . "\r\n" . 'lunch'); ?>
-                                    <p class="mb-0">
+                                    <p class="mb-0" style="height:66px">
                                         {{ $participant->name }} <br>
                                         Phone# {{ $participant->phone }}<br>
                                     </p>
@@ -170,17 +170,17 @@
                               <div class="row">
                                 <div class="col-md-4">   
                                   @if ($participant->image != '')
-                                  <img width="100%" src="{{ asset($participant->image) }}" alt="">
+                                  <img style="object-fit:contain" style="object-fit:contain" width="120px" height="120px" src="{{ asset($participant->image) }}" alt="">
                                   @elseif($participant->gender == 'Male')
-                                  <img width="100%" src="{{ asset('front/images/male.png') }}" alt="">
+                                  <img style="object-fit:contain" style="object-fit:contain" width="120px" height="120px" src="{{ asset('front/images/male.png') }}" alt="">
                                   @else
-                                  <img width="100%" src="{{ asset('front/images/female.png') }}" alt="">
+                                  <img style="object-fit:contain" style="object-fit:contain" width="120px" height="120px" src="{{ asset('front/images/female.png') }}" alt="">
                                   @endif
                                 </div>
                                 <div class="col-md-8 image text-center">
                                   <?php
                                   echo SimpleSoftwareIO\QrCode\Facades\QrCode::generate('Name: ' . $participant->name . "\r\n Id: " . intval($participant->registration_id + 3) . "\r\n" . 'lunch'); ?>
-                                  <p class="mb-0">
+                                  <p class="mb-0" style="height:66px">
                                       {{ $participant->name }} <br>
                                       Phone# {{ $participant->phone }}<br>
                                   </p>
@@ -193,17 +193,17 @@
                               <div class="row">
                                 <div class="col-md-4">   
                                   @if ($participant->image != '')
-                                  <img width="100%" src="{{ asset($participant->image) }}" alt="">
+                                  <img style="object-fit:contain" width="120px" height="120px" src="{{ asset($participant->image) }}" alt="">
                                   @elseif($participant->gender == 'Male')
-                                  <img width="100%" src="{{ asset('front/images/male.png') }}" alt="">
+                                  <img style="object-fit:contain" width="120px" height="120px" src="{{ asset('front/images/male.png') }}" alt="">
                                   @else
-                                  <img width="100%" src="{{ asset('front/images/female.png') }}" alt="">
+                                  <img style="object-fit:contain" width="120px" height="120px" src="{{ asset('front/images/female.png') }}" alt="">
                                   @endif
                                 </div>
                                 <div class="col-md-8 image text-center">
                                     <?php
                                     echo SimpleSoftwareIO\QrCode\Facades\QrCode::generate('Name: ' . $participant->name . "\r\n Id: " . intval($participant->registration_id + 2) . "\r\n" . 'lunch'); ?>
-                                    <p class="mb-0">
+                                    <p class="mb-0" style="height:66px">
                                         {{ $participant->name }} <br>
                                         Phone# {{ $participant->phone }}<br>
                                     </p>
@@ -217,17 +217,17 @@
                               <div class="row">
                                 <div class="col-md-4">   
                                   @if ($participant->image != '')
-                                  <img width="100%" src="{{ asset($participant->image) }}" alt="">
+                                  <img style="object-fit:contain" width="120px" height="120px" src="{{ asset($participant->image) }}" alt="">
                                   @elseif($participant->gender == 'Male')
-                                  <img width="100%" src="{{ asset('front/images/male.png') }}" alt="">
+                                  <img style="object-fit:contain" width="120px" height="120px" src="{{ asset('front/images/male.png') }}" alt="">
                                   @else
-                                  <img width="100%" src="{{ asset('front/images/female.png') }}" alt="">
+                                  <img style="object-fit:contain" width="120px" height="120px" src="{{ asset('front/images/female.png') }}" alt="">
                                   @endif
                                 </div>
                                 <div class="col-md-8 image text-center">
                                     <?php
                                     echo SimpleSoftwareIO\QrCode\Facades\QrCode::generate('Name: ' . $participant->name . "\r\n Id: " . intval($participant->registration_id + 3) . "\r\n" . 'lunch'); ?>
-                                    <p class="mb-0">
+                                    <p class="mb-0" style="height:66px">
                                         {{ $participant->name }} <br>
                                         Phone# {{ $participant->phone }}<br>
                                     </p>
@@ -240,7 +240,7 @@
             </main>
             <!-- Footer -->
             <footer class="text-center" style="margin-top: 6rem; margin-bottom:15rem">
-                <p class="text-1"><strong>নোটিশ :</strong>অনুগ্রহপূর্বক শতবর্ষ উদযাপনের দিন টোকেন নিয়ে আসার জন্য অনুরোধ
+                <p class="text-1" style="padding:10px 0"><strong>নোটিশ :</strong>অনুগ্রহপূর্বক শতবর্ষ উদযাপনের দিন টোকেন নিয়ে আসার জন্য অনুরোধ
                     করা হলো । অন্যথায় সাহায্য ও সকল প্রকার সেবা থেকে বঞ্চিত হইবেন । </p>
                 <div class="btn-group btn-group-sm d-print-none"> <a href="javascript:window.print()"
                         class="btn btn-light border text-black-50 shadow-none">Print</a> <a href=""

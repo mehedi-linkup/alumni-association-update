@@ -223,7 +223,7 @@
                 @endif
             </div>
         </div>
-        <div class="col-md-4">
+        <div id="image_col" class="col-md-4">
             <div class="form-group">
                 <label for="image" class="form-label">Image</label>
                 <div class="input-group mb-1">
@@ -260,6 +260,8 @@
                 @endif
             </div>
         </div>
+    </div>
+    <div class="row">
         <div class="col-md-12">
             <button type="submit" onclick="participantsubmit()" class="btn btn-info float-right">Submit</button>
         </div>

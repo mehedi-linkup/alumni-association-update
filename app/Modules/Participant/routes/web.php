@@ -25,5 +25,7 @@ Route::group(['module' => 'participant', 'prefix' => 'participant', 'middleware'
     Route::get('print-participant-id/{id}', "ParticipantController@PrintParticipantId")->name('print_participant_id');
     Route::get('downloadepdf-participant-list/{id}', "ParticipantController@DownloadPDFarticipantList")->name('downloadpdf-participant-list');
     Route::get('soronika-documents', "ParticipantController@SoronikaDocuments")->name('soronika-documents');
+
+    Route::get('participant-sms', 'ParticipantSmsController@index')->name('participant-sms');
     Route::post('check-phone', "ParticipantController@CheckPhone")->name('check-phone');
 });

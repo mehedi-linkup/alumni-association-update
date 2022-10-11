@@ -35,17 +35,12 @@
                         @csrf
                         <label for="Email">Email Address</label>
                         <div class="field-wrapper">
-                            <input class="field-text @error('phone') is-invalid @enderror" required id="email" name="phone" placeholder="Enter your Email Address" type="text" value="">
-                            {{-- @if ($errors->has('phone'))
-                                       <span class="invalid-feedback{{ $errors->has('phone') ? ' is-invalid' : '' }}">
-                            <strong>{{ $errors->first('phone') }}</strong>
-                            </span>
-                            @endif --}}
-                            @error('Phone')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
+                            <input type="email" id="email" name="email" class="field-text @error('email') is-invalid @enderror" required  placeholder="Enter your Email Address" value="">
+                            <span id="error_email" class="text-danger"></span>
+                            {{-- @error('email') --}}
+                            {{-- <span id="error_email" class="invalid-feedback" role="alert">
+                            </span> --}}
+                            {{-- @enderror --}}
                         </div>
 
 

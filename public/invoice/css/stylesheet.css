@@ -26,7 +26,8 @@
 /* =================================== */
 
 body {
-    background: #e7e9ed;
+    /* background: #e7e9ed; */
+    background-color: #fff;
     color: #535b61;
     font-family: "Poppins", sans-serif;
     font-size: 14px;

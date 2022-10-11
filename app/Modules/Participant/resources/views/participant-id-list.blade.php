@@ -39,7 +39,10 @@
             float: right;
             -webkit-text-stroke: 0.4px #3d3e9a;
         }
-
+        .row > .col-md-6 {
+            padding-bottom: 0.75rem;
+            padding-top: 0.75rem;
+        }
         ul {
             text-decoration: none;
         }
@@ -65,6 +68,7 @@
             height: 200px;
             width: 200px;
             border-radius: 5px;
+            object-fit: contain;
         }
         .profile-image h5 {
             text-transform: uppercase;
@@ -221,7 +225,6 @@
                                                 
                                                 // use SimpleSoftwareIO\QrCode\Facades\QrCode;
                                                 echo QrCode::generate('Name: ' . $part->name . "\r\n Id: " . intval($part->registration_id) . "\r\n" . 'lunch'); ?>
-            
                                             </div>
                                         </div>
                                     </div>

@@ -38,10 +38,9 @@
                 <i class="fas fa-user-circle"></i>
                 <span>SMS</span>
             </a>
-            <div id="collapseSms" class="collapse {{$route == 'sms-active-list'||$route == 'sms-inactive-list' ? 'show' : ''}}" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+            <div id="collapseSms" class="collapse {{$route == 'participant-sms' ? 'show' : ''}}" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a href="{{route('sms-active-list')}}" class="collapse-item {{$route == 'sms-active-list' ? 'active' : ''}}" >Active Participant</a>
-                    <a href="{{route('sms-inactive-list')}}" class="collapse-item {{$route == 'sms-inactive-list' ? 'active' : ''}}" >Inactive Participant</a>
+                    <a href="{{route('participant-sms')}}" class="collapse-item {{$route == 'sms-active-list' ? 'active' : ''}}" >Send SMS</a>
                 </div>
             </div>
         </li>

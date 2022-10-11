@@ -420,6 +420,8 @@ class FrontController extends Controller
     {
         $participant = Participant::where('email', $request->email)->first();
         $data = [];
+
+        // return response()->json($request->all());
         if ($participant) {
             $data = "success";
             $rand = rand(1000, 9999);
@@ -440,7 +442,7 @@ class FrontController extends Controller
                 //Server settings
                 $mail->SMTPDebug = 0;                      //Enable verbose debug output
                 $mail->isSMTP();                                            //Send using SMTP
-                $mail->Host       = 'mail.aahcalumni.org';                     //Set the SMTP server to send through
+                $mail->Host       = 'rs006.webhostbox.net';                     //Set the SMTP server to send through
                 $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
                 $mail->Username   = 'services@mail.aahcalumni.org';                     //SMTP username
                 $mail->Password   = 'aliazam2021';                               //SMTP password
@@ -459,7 +461,7 @@ class FrontController extends Controller
                 $mail->send();
                 return response()->json($data);
             } catch (Exception $e) {
-                echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+                return response()->json($mail->ErrorInfo);
             }
         } else {
             $data = "false";

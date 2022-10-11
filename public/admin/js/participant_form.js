@@ -177,6 +177,7 @@ function participantsubmit() {
                         }
                         $('#pass').show();
                         $('#confirm_pass').show();
+                        $('#image_col').removeClass(' order-last');
                         $("#frmCheckout").trigger("reset");
                         $(".mb-1.first").html("");
                         $("#participant_list_data").empty();
@@ -254,6 +255,7 @@ function editparticipant(id) {
             $("#occupation").val(data.occupation);
             $('#pass').hide();
             $('#confirm_pass').hide();
+            $('#image_col').addClass(' order-last');
             $("#participant_id").val(data.id);
             if(data.image) {
                 $(".mb-1.first img").attr("src", "/" + data.image);
