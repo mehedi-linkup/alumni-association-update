@@ -175,6 +175,8 @@ function participantsubmit() {
                             $output += '<td class="text-center"> <a class="btn btn-primary btn-xs" id="' + data[i].id + '" onclick="editparticipant(this.id)" style="color: #fff"> <i class="fa fa-edit"></i> Edit </a> <a class="btn btn-danger btn-xs" name="' + data[i].id + '" onclick="deleteparticipant(this.name,event)" style="color: #ffffff"> <i class="fas fa-remove"></i> Delete </a></td>';
                             $output += '</tr>';
                         }
+                        $('#pass').show();
+                        $('#confirm_pass').show();
                         $("#frmCheckout").trigger("reset");
                         $(".mb-1.first").html("");
                         $("#participant_list_data").empty();
@@ -231,6 +233,7 @@ function imageUpload(input) {
 
 function editparticipant(id) { 
     var APP_URL = $('meta[name="_base_url"]').attr('content');
+    // var base_url = "{{asset('')}}"
     $.ajax({
         url: APP_URL + '/participant/edit-participant',
         method: "get",
@@ -249,8 +252,14 @@ function editparticipant(id) {
             $("#blood_group").val(data.blood_group);
             $("#gender").val(data.gender);
             $("#occupation").val(data.occupation);
+            $('#pass').hide();
+            $('#confirm_pass').hide();
             $("#participant_id").val(data.id);
-            $(".mb-1.first img").attr('src','/admin/img/no_image_found.png');
+            if(data.image) {
+                $(".mb-1.first img").attr("src", "/" + data.image);
+            } else {
+                $(".mb-1.first img").attr("src", "/admin/img/no_image_found.png");
+            }
             $("#name").focus();
             // $("#image").val(data.image);
             // $("#show_photo").attr("src","http://localhost/School-event/public/"+data.image);

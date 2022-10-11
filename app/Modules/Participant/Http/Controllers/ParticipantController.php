@@ -267,9 +267,13 @@ class ParticipantController extends Controller
             DB::commit();
             // $status = 0;
 
-            // $participant = Participant::participantList($status);
+            // $participant = Participant::participantList($status);            
             $participant = Participant::latest()->get();
-            Session::flash('success', 'The participant has been added successfully!');
+            if ($request->participant_id) {
+                Session::flash('success', 'The participant has been updated successfully!');
+            } else {
+                Session::flash('success', 'The participant has been added successfully!');
+            }
             return response()->json($participant);
         } catch (\Exception $e) {
             DB::rollback();
@@ -392,7 +396,6 @@ class ParticipantController extends Controller
     }
 
     public function DownloadPDFarticipantList($id){
-        
         $participant = Participant::where('id',$id)->first();
         $pdf = PDF::loadView('admin.downloadpdf-participant-list',compact('participant'))->setOptions(['defaultFont' => 'sans-serif']);
         return $pdf->stream('invoice.pdf');

@@ -102,6 +102,10 @@ Route::get('edit-notes', 'WelcomeNotesController@EditNotes')->name('edit-notes')
 Route::post('update-notes', "WelcomeNotesController@UpdateNotes")->name('update-notes');
 //End Welcome Notes routes end here
 
+Route::get('participant-sms-activelist', 'ParticipantSmsController@index')->name('sms-active-list');
+Route::get('participant-sms-inactivelist', 'ParticipantSmsController@index')->name('sms-inactive-list');
+
+
 
 //Welcome News is start here
 Route::get('edit-news-notes', 'WelcomeNewsNotesController@EditNewsNote')->name('edit-news-notes');

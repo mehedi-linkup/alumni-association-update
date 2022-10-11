@@ -62,18 +62,13 @@
                         <label class="custom-file-label" for="image">Choose file</label>
                     </div>
                 </div>
-                {{--                <small id="emailHelp" class="form-text text-muted">--}}
-                {{--                    File Format: *.jpg/ .png | Max file size: 3MB--}}
-                {{--                </small>--}}
+              
                 <div class="mb-1 first">
-                    {{--                    <img class="mb-1" id="photo_preview" height="100" width="100">--}}
                     {!! CommonFunction::getImageFromURL(optional($welcomenews)->image, '', 'show_photo') !!}
                     <div class="first">
 
                     </div>
                 </div>
-                {{--Show image--}}
-
             </div>
 
         </div>

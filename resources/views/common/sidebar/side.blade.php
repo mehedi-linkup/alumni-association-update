@@ -33,6 +33,19 @@
             </div>
         </li>
         <li class="nav-item">
+            <a class="nav-link {{$route == 'sms-active-list' ? '' : 'collapsed'}}" href="#" data-toggle="collapse" data-target="#collapseSms"
+               aria-expanded="true" aria-controls="collapseUser">
+                <i class="fas fa-user-circle"></i>
+                <span>SMS</span>
+            </a>
+            <div id="collapseSms" class="collapse {{$route == 'sms-active-list'||$route == 'sms-inactive-list' ? 'show' : ''}}" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <a href="{{route('sms-active-list')}}" class="collapse-item {{$route == 'sms-active-list' ? 'active' : ''}}" >Active Participant</a>
+                    <a href="{{route('sms-inactive-list')}}" class="collapse-item {{$route == 'sms-inactive-list' ? 'active' : ''}}" >Inactive Participant</a>
+                </div>
+            </div>
+        </li>
+        <li class="nav-item">
             @php
                 $participateArray = ['view-participant','pending-participant','active-participant','participant_list'];
                 $participateExist = in_array($route, $participateArray, TRUE);
@@ -60,14 +73,18 @@
                         @foreach ($passing_year as $passing)
                             @if($passing->passing_year != null)
                                 @if(!in_array($passing->passing_year, $yearArray))
-                                <li><a href="{{route('participant_list',['passing_year'=>$passing->passing_year])}}"><i class="fa fa-folder-open"></i>{{$passing->passing_year}}</a></li>
+                                <li><a href="{{route('participant_list',['passing_year'=>$passing->passing_year])}}"><i class="fa fa-folder-open"></i>
+                                    {{$passing->passing_year}} <span class="text-warning">({{$passing_year->where('passing_year', $passing->passing_year)->count()}})</span>
+                                </a></li>
                                 @endif
 
                                 @php
                                     array_push($yearArray, $passing->passing_year);
                                 @endphp
                             @endif
-                            {{-- <?php $contain = $passing->passing_year; ?> --}}
+                            <?php
+                            //  $contain = $passing->passing_year; 
+                            ?>
                         @endforeach
                     </ul>
                 </div>

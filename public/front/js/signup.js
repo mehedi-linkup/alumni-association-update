@@ -183,6 +183,7 @@ function invoiceprint() {
     var frameDoc = frame1[0].contentWindow ? frame1[0].contentWindow : frame1[0].contentDocument.document ? frame1[0].contentDocument.document : frame1[0].contentDocument;
     frameDoc.document.open();
     //Create a new HTML document.
+    frameDoc.document.write('<!DOCTYPE html>')
     frameDoc.document.write('<html><head><title>Student Payment Invoice</title>');
     frameDoc.document.write('</head><body>');
     //Append the external CSS file.

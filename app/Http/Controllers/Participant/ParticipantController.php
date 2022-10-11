@@ -44,6 +44,7 @@ class ParticipantController extends Controller
             $data->permanent_address = $request->permanent_address;
             $data->email = $request->email;
             $data->phone = $request->phone;
+            $data->dress = $request->dress;
             $data->blood_group = $request->blood_group;
             $data->gender = $request->gender;
             if ($request->has('image') && $request->image != '') {
