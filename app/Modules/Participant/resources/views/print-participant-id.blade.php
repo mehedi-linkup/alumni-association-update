@@ -35,8 +35,8 @@
         text-shadow: 1px 0px #fff;
         font-weight: 600;
         font-family: roboto;
-        color: white;
-        text-shadow: 1px 1px 0 #26258d, 1px 1px 0 #26258d, 1px 1px 0 #26258d, 1px 1px 0 #26258d;
+        color: #cb0a0a;
+        text-shadow: 1px 1px 0 #cb0a0a, 1px 1px 0 #cb0a0a, 1px 1px 0 #cb0a0a, 1px 1px 0 #cb0a0a;
         float:right;
         -webkit-text-stroke: 0.4px #3d3e9a;
     }

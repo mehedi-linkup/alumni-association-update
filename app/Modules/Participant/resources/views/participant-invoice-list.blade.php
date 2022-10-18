@@ -20,7 +20,13 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('invoice/css/all.min.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('invoice/css/stylesheet.css') }}" />
     <style>
-
+         .event {
+            text-align: center;
+            font-size: 16px;
+            color: red;
+            font-weight: bold;
+            padding-top: 5px;
+        }
     </style>
 </head>
 
@@ -105,6 +111,7 @@
                                           @else
                                           <img style="object-fit:contain" width="120px" height="120px" src="{{ asset('front/images/female.png') }}" alt="">
                                           @endif
+                                          <p class="mb-0 event">Raffle Draw</p>
                                   </div>
                                   <div class="col-md-8 image text-center">
                                       <?php
@@ -128,6 +135,7 @@
                                 @else
                                 <img style="object-fit:contain" style="object-fit:contain" style="object-fit:contain" style="object-fit:contain" width="120px" height="120px" src="{{ asset('front/images/female.png') }}" alt="">
                                 @endif
+                                <p class="mb-0 event">Raffle Draw</p>
                               </div>
                               <div class="col-md-8 image text-center">
                                   <?php
@@ -152,6 +160,7 @@
                                   @else
                                   <img style="object-fit:contain" style="object-fit:contain" style="object-fit:contain" width="120px" height="120px" src="{{ asset('front/images/female.png') }}" alt="">
                                   @endif
+                                  <p class="mb-0 event">Evening Tiffin</p>
                                 </div>
                                 <div class="col-md-8 image text-center">
                                     <?php
@@ -176,6 +185,7 @@
                                   @else
                                   <img style="object-fit:contain" style="object-fit:contain" width="120px" height="120px" src="{{ asset('front/images/female.png') }}" alt="">
                                   @endif
+                                  <p class="mb-0 event">Lunch</p>
                                 </div>
                                 <div class="col-md-8 image text-center">
                                   <?php
@@ -199,6 +209,7 @@
                                   @else
                                   <img style="object-fit:contain" width="120px" height="120px" src="{{ asset('front/images/female.png') }}" alt="">
                                   @endif
+                                  <p class="mb-0 event">Breakfast</p>
                                 </div>
                                 <div class="col-md-8 image text-center">
                                     <?php
@@ -223,6 +234,7 @@
                                   @else
                                   <img style="object-fit:contain" width="120px" height="120px" src="{{ asset('front/images/female.png') }}" alt="">
                                   @endif
+                                  <p class="mb-0 event">Id Card & Gift</p>
                                 </div>
                                 <div class="col-md-8 image text-center">
                                     <?php
@@ -240,8 +252,8 @@
             </main>
             <!-- Footer -->
             <footer class="text-center" style="margin-top: 6rem; margin-bottom:15rem">
-                <p class="text-1" style="padding:10px 0"><strong>নোটিশ :</strong>অনুগ্রহপূর্বক শতবর্ষ উদযাপনের দিন টোকেন নিয়ে আসার জন্য অনুরোধ
-                    করা হলো । অন্যথায় সাহায্য ও সকল প্রকার সেবা থেকে বঞ্চিত হইবেন । </p>
+                <p class="text-1 text-danger" style="padding:10px 0"><strong>নোটিশ :</strong>অনুগ্রহপূর্বক শতবর্ষ উদযাপনের দিন টোকেন নিয়ে আসার জন্য অনুরোধ
+                    করা হলো । অন্যথায় সকল প্রকার সেবা থেকে বঞ্চিত হইবেন । </p>
                 <div class="btn-group btn-group-sm d-print-none"> <a href="javascript:window.print()"
                         class="btn btn-light border text-black-50 shadow-none">Print</a> <a href=""
                         class="btn btn-light border text-black-50 shadow-none"> Download</a> </div>

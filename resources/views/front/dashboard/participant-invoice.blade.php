@@ -20,7 +20,17 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('invoice/css/all.min.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('invoice/css/stylesheet.css') }}" />
     <style>
-
+        .event {
+            text-align: center;
+            font-size: 16px;
+            color: red;
+            font-weight: bold;
+            padding-top: 5px;
+        }
+        img {
+            object-fit: contain;
+            max-height: 150px;
+        }
     </style>
 </head>
 
@@ -94,13 +104,15 @@
                 <div class="barcode-section-border mb-3"></div>
                 <div class="row">
                     <div class="col-sm-6 pb-2 bottom-dash right-dash ">
-                        <div class="shadow p-3 align-item-center">
+                        <div class="shadow p-3 d-flex align-items-start justify-content-between">
                             <div class="ml-3">
                                 <img width="100" height="100"
                                     @if (!Auth::guard('participant')->user()->image == '') src="{{ asset($participant->image) }}"   @elseif(Auth::guard('participant')->user()->gender == 'Male') src="{{ asset('front/images/male.png') }}" @else src="{{ asset('front/images/female.png') }}" @endif
                                     alt="">
+
+                                <p class="mb-0 event">Raffle Draw</p>
                             </div>
-                            <div class="image text-center">
+                            <div class="image pl-4 text-center">
                                 <?php
                                 use SimpleSoftwareIO\QrCode\Facades\QrCode;
                                 echo QrCode::generate('Name: ' . $participant->name . "\r\n Id: " . intval($participant->registration_id) . "\r\n" . 'lunch'); ?>
@@ -112,11 +124,12 @@
                         </div>
                     </div>
                     <div class="col-sm-6 bottom-dash pb-2">
-                        <div class="shadow p-3 align-item-center">
+                        <div class="shadow p-3 d-flex align-items-start justify-content-between">
                             <div class="ml-3">
                                 <img width="100" height="100"
                                     @if (!Auth::guard('participant')->user()->image == '') src="{{ asset($participant->image) }}"   @elseif(Auth::guard('participant')->user()->gender == 'Male') src="{{ asset('front/images/male.png') }}" @else src="{{ asset('front/images/female.png') }}" @endif
                                     alt="">
+                                <p class="mb-0 event">Raffle Draw</p>
                             </div>
                             <div class="image pl-4 text-center">
                                 <?php
@@ -130,11 +143,12 @@
                     </div>
 
                     <div class="col-sm-6 pt-2 right-dash">
-                        <div class="shadow  p-3 align-item-center">
+                        <div class="shadow  p-3 d-flex align-items-start justify-content-between">
                             <div class="ml-3">
                                 <img width="100" height="100"
                                     @if (!Auth::guard('participant')->user()->image == '') src="{{ asset($participant->image) }}"   @elseif(Auth::guard('participant')->user()->gender == 'Male') src="{{ asset('front/images/male.png') }}" @else src="{{ asset('front/images/female.png') }}" @endif
                                     alt="">
+                                <p class="mb-0 event">Evening Tiffin</p>
                             </div>
                             <div class="image pl-4 text-center">
                                 <?php
@@ -148,11 +162,12 @@
                     </div>
 
                     <div class="col-sm-6 pt-2">
-                        <div class="shadow p-3 align-item-center">
+                        <div class="shadow p-3 d-flex align-items-start justify-content-between">
                             <div class="ml-3">
                                 <img width="100" height="100"
                                     @if (!Auth::guard('participant')->user()->image == '') src="{{ asset($participant->image) }}"   @elseif(Auth::guard('participant')->user()->gender == 'Male') src="{{ asset('front/images/male.png') }}" @else src="{{ asset('front/images/female.png') }}" @endif
                                     alt="">
+                                <p class="mb-0 event">Lunch</p>
                             </div>
                             <div class="image pl-4 text-center">
                                 <?php
@@ -165,11 +180,12 @@
                         </div>
                     </div>
                     <div class="col-sm-6 pt-2 right-dash">
-                        <div class="shadow  p-3 align-item-center">
+                        <div class="shadow  p-3 d-flex align-items-start justify-content-between">
                             <div class="ml-3">
                                 <img width="100" height="100"
                                     @if (!Auth::guard('participant')->user()->image == '') src="{{ asset($participant->image) }}"   @elseif(Auth::guard('participant')->user()->gender == 'Male') src="{{ asset('front/images/male.png') }}" @else src="{{ asset('front/images/female.png') }}" @endif
                                     alt="">
+                                <p class="mb-0 event">Breakfast</p>
                             </div>
                             <div class="image pl-4 text-center">
                                 <?php
@@ -183,11 +199,12 @@
                     </div>
 
                     <div class="col-sm-6 pt-2">
-                        <div class="shadow p-3 align-item-center">
+                        <div class="shadow p-3 d-flex align-items-start justify-content-between">
                             <div class="ml-3">
                                 <img width="100" height="100"
                                     @if (!Auth::guard('participant')->user()->image == '') src="{{ asset($participant->image) }}"   @elseif(Auth::guard('participant')->user()->gender == 'Male') src="{{ asset('front/images/male.png') }}" @else src="{{ asset('front/images/female.png') }}" @endif
                                     alt="">
+                                <p class="mb-0 event">Id Card & Gift</p>
                             </div>
                             <div class="image pl-4 text-center">
                                 <?php

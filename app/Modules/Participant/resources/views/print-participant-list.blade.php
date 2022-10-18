@@ -20,7 +20,17 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('invoice/css/all.min.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('invoice/css/stylesheet.css') }}" />
     <style>
-
+        .event {
+            text-align: center;
+            font-size: 16px;
+            color: red;
+            font-weight: bold;
+            padding-top: 5px;
+        }
+        img {
+            object-fit: contain;
+            max-height: 150px;
+        }
     </style>
 </head>
 
@@ -95,11 +105,12 @@
                 <div class="barcode-section-border mb-3"></div>
                 <div class="row">
                     <div class="col-sm-6 pb-2 bottom-dash right-dash ">
-                        <div class="shadow p-3 align-item-center">
+                        <div class="shadow p-3 d-flex align-items-start justify-content-center">
                             <div class="ml-3">
                                 <img width="100" height="100"
                                     @if (!$participant->image == '') src="{{ asset($participant->image) }}"   @elseif($participant->gender == 'Male') src="{{ asset('front/images/male.png') }}" @else src="{{ asset('front/images/female.png') }}" @endif
                                     alt="">
+                                <p class="mb-0 event">Raffle Draw</p>
                             </div>
                             <div class="image pl-4 text-center">
                                 <?php
@@ -113,11 +124,12 @@
                         </div>
                     </div>
                     <div class="col-sm-6 bottom-dash pb-2">
-                        <div class="shadow p-3 align-item-center">
+                        <div class="shadow p-3 d-flex align-items-start justify-content-center">
                             <div class="ml-3">
                                 <img width="100" height="100"
                                     @if (!$participant->image == '') src="{{ asset($participant->image) }}"   @elseif($participant->gender == 'Male') src="{{ asset('front/images/male.png') }}" @else src="{{ asset('front/images/female.png') }}" @endif
                                     alt="">
+                                <p class="mb-0 event">Raffle Draw</p>
                             </div>
                             <div class="image pl-4 text-center">
                                 <?php
@@ -131,11 +143,12 @@
                     </div>
 
                     <div class="col-sm-6 pt-2 right-dash">
-                        <div class="shadow  p-3 align-item-center">
+                        <div class="shadow  p-3 d-flex align-items-start justify-content-center">
                             <div class="ml-3">
                                 <img width="100" height="100"
                                     @if (!$participant->image == '') src="{{ asset($participant->image) }}"   @elseif($participant->gender == 'Male') src="{{ asset('front/images/male.png') }}" @else src="{{ asset('front/images/female.png') }}" @endif
                                     alt="">
+                                <p class="mb-0 event">Evening Tiffin</p>
                             </div>
                             <div class="image pl-4 text-center">
                                 <?php
@@ -149,11 +162,12 @@
                     </div>
 
                     <div class="col-sm-6 pt-2">
-                        <div class="shadow p-3 align-item-center">
+                        <div class="shadow p-3 d-flex align-items-start justify-content-center">
                             <div class="ml-3">
                                 <img width="100" height="100"
                                     @if (!$participant->image == '') src="{{ asset($participant->image) }}"   @elseif($participant->gender == 'Male') src="{{ asset('front/images/male.png') }}" @else src="{{ asset('front/images/female.png') }}" @endif
                                     alt="">
+                                <p class="mb-0 event">Lunch</p>
                             </div>
                             <div class="image pl-4 text-center">
                                 <?php
@@ -166,11 +180,12 @@
                         </div>
                     </div>
                     <div class="col-sm-6 pt-2 right-dash">
-                        <div class="shadow  p-3 align-item-center">
+                        <div class="shadow  p-3 d-flex align-items-start justify-content-center">
                             <div class="ml-3">
                                 <img width="100" height="100"
                                     @if (!$participant->image == '') src="{{ asset($participant->image) }}"   @elseif($participant->gender == 'Male') src="{{ asset('front/images/male.png') }}" @else src="{{ asset('front/images/female.png') }}" @endif
                                     alt="">
+                                <p class="mb-0 event">Breakfast</p>
                             </div>
                             <div class="image pl-4 text-center">
                                 <?php
@@ -184,11 +199,12 @@
                     </div>
 
                     <div class="col-sm-6 pt-2">
-                        <div class="shadow p-3 align-item-center">
+                        <div class="shadow p-3 d-flex align-items-start justify-content-center">
                             <div class="ml-3">
                                 <img width="100" height="100"
                                     @if (!$participant->image == '') src="{{ asset($participant->image) }}"   @elseif($participant->gender == 'Male') src="{{ asset('front/images/male.png') }}" @else src="{{ asset('front/images/female.png') }}" @endif
                                     alt="">
+                                <p class="mb-0 event">Id Card & Gift</p>
                             </div>
                             <div class="image pl-4 text-center">
                                 <?php
@@ -205,8 +221,8 @@
         </main>
         <!-- Footer -->
         <footer class="text-center mt-4">
-            <p class="text-1"><strong>নোটিশ :</strong>অনুগ্রহপূর্বক শতবর্ষ উদযাপনের দিন টোকেন নিয়ে আসার জন্য অনুরোধ করা
-                হলো । অন্যথায় সাহায্য ও সকল প্রকার সেবা থেকে বঞ্চিত হইবেন । </p>
+            <p class="text-1 text-danger"><strong class="text-dark">নোটিশ :</strong> অনুগ্রহপূর্বক শতবর্ষ উদযাপনের দিন
+                টোকেন নিয়ে আসার জন্য অনুরোধ করা হলো । অন্যথায় সকল প্রকার সেবা থেকে বঞ্চিত হবেন । </p>
             <div class="btn-group btn-group-sm d-print-none"> <a href="javascript:window.print()"
                     class="btn btn-light border text-black-50 shadow-none">Print</a> <a href=""
                     class="btn btn-light border text-black-50 shadow-none" download> Download</a> </div>

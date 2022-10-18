@@ -421,8 +421,16 @@ button {
 
 .countdown {
     position: absolute;
-    top: 30px;
-    right: 10px;
+    top: 50px;
+    right: -15px;
+}
+.countdown::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    display: block;
 }
 /*media query*/
 

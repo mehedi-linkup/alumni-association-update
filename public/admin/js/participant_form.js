@@ -194,7 +194,6 @@ function participantsubmit() {
 }
 
 function imageUpload(input) {
-
     var img_preview_id = input.id + '_preview';
     console.log(img_preview_id);
     if (input.files && input.files[0]) {
